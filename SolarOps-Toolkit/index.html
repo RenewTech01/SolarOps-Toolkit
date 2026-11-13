@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SolarOps Toolkit | Solar Engineering Tools</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-content">
+
+            <a href="#" class="logo">SolarOps<span> Toolkit</span></a>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#tools">Calculators</a>
+                <a href="#resources">Resources</a>
+                <a href="#about">About</a>
+                <a href="#pr-calculator">PR Calculator</a>
+                <a href="#cuf-calculator">CUF Calculator</a>
+                <a href="#dcac-calculator">DC/AC Calculator</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="container hero-content">
+
+            <p class="tagline">THE SOLAR ENGINEERING TOOLKIT</p>
+
+            <h1>
+                Smarter Solar Operations
+                <span>Start Here.</span>
+            </h1>
+
+            <p class="hero-description">
+                Practical calculators, technical knowledge and
+                maintenance resources for solar professionals.
+            </p>
+
+            <a href="#tools" class="primary-button">
+                Explore Solar Tools →
+            </a>
+
+        </div>
+
+    </section>
+
+
+   
+<!-- Calculator Section -->
+<section class="tools-section" id="tools">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <p class="section-label">OUR TOOLS</p>
+            <h2>Solar Engineering Calculators</h2>
+            <p>Simple tools to make your solar calculations easier.</p>
+        </div>
+
+        <!-- All three calculators are inside this grid -->
+        <div class="calculator-grid">
+
+            <!-- 1. PR Calculator -->
+            <div class="calculator-box" id="pr-calculator">
+
+                <h3>Solar Plant PR Calculator</h3>
+
+                <p class="calculator-intro">
+                    Calculate the Performance Ratio of your solar power plant.
+                </p>
+
+                <div class="input-group">
+                    <label for="capacity">Installed DC Capacity (kWp)</label>
+                    <input type="number" id="capacity"
+                        placeholder="Example: 100" min="0" step="any">
+                </div>
+
+                <div class="input-group">
+                    <label for="generation">Energy Generated (kWh)</label>
+                    <input type="number" id="generation"
+                        placeholder="Example: 150000" min="0" step="any">
+                </div>
+
+                <div class="input-group">
+                    <label for="irradiation">POA Irradiation (kWh/m²)</label>
+                    <input type="number" id="irradiation"
+                        placeholder="Example: 1800" min="0" step="any">
+                </div>
+
+                <button class="calculate-button" onclick="calculatePR()">
+                    Calculate PR
+                </button>
+
+                <div id="result" class="result-box" aria-live="polite">
+                    <p>Your PR result will appear here.</p>
+                </div>
+
+            </div>
+
+
+            <!-- 2. CUF Calculator -->
+            <div class="calculator-box" id="cuf-calculator">
+
+                <h3>Solar Plant CUF Calculator</h3>
+
+                <p class="calculator-intro">
+                    Calculate the Capacity Utilisation Factor of your solar plant.
+                </p>
+
+                <div class="input-group">
+                    <label for="cuf-capacity">Installed AC Capacity (kW)</label>
+                    <input type="number" id="cuf-capacity"
+                        placeholder="Example: 100" min="0" step="any">
+                </div>
+
+                <div class="input-group">
+                    <label for="cuf-generation">Energy Generated (kWh)</label>
+                    <input type="number" id="cuf-generation"
+                        placeholder="Example: 6000" min="0" step="any">
+                </div>
+
+                <div class="input-group">
+                    <label for="cuf-days">Calculation Period (Days)</label>
+                    <input type="number" id="cuf-days"
+                        placeholder="Example: 30" min="1" step="1">
+                </div>
+
+                <button class="calculate-button" onclick="calculateCUF()">
+                    Calculate CUF
+                </button>
+
+                <div id="cuf-result" class="result-box" aria-live="polite">
+                    <p>Your CUF result will appear here.</p>
+                </div>
+
+            </div>
+
+
+            <!-- 3. DC/AC Ratio Calculator -->
+            <div class="calculator-box" id="dcac-calculator">
+
+                <h3>Solar DC/AC Ratio Calculator</h3>
+
+                <p class="calculator-intro">
+                    Calculate the DC to AC capacity ratio of your solar plant.
+                </p>
+
+                <div class="input-group">
+                    <label for="dc-capacity">Total DC Module Capacity (kWp)</label>
+                    <input type="number" id="dc-capacity"
+                        placeholder="Example: 120" min="0" step="any">
+                </div>
+
+                <div class="input-group">
+                    <label for="ac-capacity">Total Inverter AC Capacity (kW)</label>
+                    <input type="number" id="ac-capacity"
+                        placeholder="Example: 100" min="0" step="any">
+                </div>
+
+                <button class="calculate-button" onclick="calculateDCAC()">
+                    Calculate DC/AC Ratio
+                </button>
+
+                <div id="dcac-result" class="result-box" aria-live="polite">
+                    <p>Your DC/AC ratio will appear here.</p>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- End calculator grid -->
+
+    </div>
+
+</section>
+<!-- End Calculator Section -->
+
+
+    <!-- Resources Section -->
+    <section class="resources-section" id="resources">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <p class="section-label">LEARN AND IMPROVE</p>
+                <h2>Resources for Solar Professionals</h2>
+            </div>
+
+            <div class="resource-box">
+                <h3>Practical Solar Engineering Knowledge</h3>
+                <p>
+                    Learn about solar plant operations,
+                    inverter troubleshooting, maintenance
+                    and performance improvement.
+                </p>
+                <a href="mailto:contact@solaropstoolkit.example">
+                    Contact Us →
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+
+        <div class="container">
+            <h2>About SolarOps Toolkit</h2>
+
+            <p>
+                SolarOps Toolkit aims to make solar engineering
+                knowledge and practical tools accessible to
+                engineers, technicians and solar businesses.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container">
+            <h3>SolarOps Toolkit</h3>
+
+            <p>Practical Tools for Solar Professionals.</p>
+
+            <p class="copyright">
+                © 2026 SolarOps Toolkit. All rights reserved.
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
