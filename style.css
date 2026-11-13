@@ -1,0 +1,508 @@
+
+/* 1. Basic website settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #243247;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+
+/* 2. Navigation bar */
+
+.navbar {
+    background-color: #10243a;
+    padding: 20px 0;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #49cf91;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #49cf91;
+}
+
+
+/* 3. Hero section */
+
+.hero {
+    background: linear-gradient(120deg, #10243a, #174c53);
+    color: white;
+    padding: 100px 0;
+}
+
+.hero-content {
+    max-width: 1150px;
+}
+
+.tagline {
+    color: #49cf91;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #49cf91;
+}
+
+.hero-description {
+    color: #d5e2e7;
+    font-size: 17px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.primary-button {
+    display: inline-block;
+    background-color: #49cf91;
+    color: #10243a;
+    padding: 13px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.primary-button:hover {
+    background-color: #ffffff;
+}
+
+
+/* 4. Calculator section */
+
+.tools-section {
+    padding: 80px 0;
+    background-color: #f5f8fa;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-label {
+    color: #16875b;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    color: #10243a;
+    margin: 10px 0;
+}
+
+.section-heading p {
+    color: #64748b;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.tool-card {
+    background-color: white;
+    padding: 28px 22px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.tool-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.tool-card h3 {
+    color: #10243a;
+    margin-bottom: 10px;
+}
+
+.tool-card p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.tool-card a {
+    color: #16875b;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+
+/* 5. Resources section */
+
+.resources-section {
+    padding: 80px 0;
+}
+
+.resource-box {
+    background-color: #eaf5ef;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.resource-box h3 {
+    color: #10243a;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.resource-box p {
+    color: #526477;
+    max-width: 650px;
+    margin: 0 auto 20px;
+}
+
+.resource-box a {
+    color: #16875b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* 6. About section */
+
+.about-section {
+    background-color: #f5f8fa;
+    padding: 65px 0;
+    text-align: center;
+}
+
+.about-section h2 {
+    color: #10243a;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    max-width: 750px;
+    margin: auto;
+    color: #64748b;
+}
+
+
+/* 7. Footer */
+
+.footer {
+    background-color: #10243a;
+    color: white;
+    text-align: center;
+    padding: 35px 0;
+}
+
+.footer p {
+    color: #b8c8d3;
+    margin-top: 8px;
+}
+
+.copyright {
+    font-size: 12px;
+    margin-top: 25px !important;
+}
+
+
+/* 8. Mobile responsive design */
+
+@media (max-width: 850px) {
+
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .nav-content {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .resource-box {
+        padding: 25px 18px;
+    }
+
+}
+
+/* Solar PR Calculator */
+
+/* Calculator dashboard layout */
+
+#tools {
+    padding: 50px 5%;
+}
+
+#tools .calculator-box {
+    background: white;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid #dce5e9;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+#tools {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: start;
+}
+
+.calculator-box h3 {
+    color: #10243a;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.calculator-intro {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #243247;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.input-group input:focus {
+    outline: 2px solid #49cf91;
+    border-color: #16875b;
+}
+
+.calculate-button {
+    width: 100%;
+    padding: 14px;
+    background: #16875b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calculate-button:hover {
+    background: #10243a;
+}
+
+.result-box {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #eaf5ef;
+    text-align: center;
+    color: #10243a;
+}
+
+.result-box h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.result-box .pr-value {
+    font-size: 36px;
+    font-weight: bold;
+    color: #16875b;
+}
+
+.result-box p {
+    font-size: 14px;
+}
+/* Calculator section improvements */
+
+.calculator-box {
+    scroll-margin-top: 30px;
+}
+
+.calculator-box h3 {
+    border-bottom: 2px solid #eaf5ef;
+    padding-bottom: 12px;
+}
+
+.calculator-box input {
+    box-sizing: border-box;
+}
+
+.calculator-box input:focus {
+    outline: 2px solid #49cf91;
+    border-color: #16875b;
+}
+
+@media (max-width: 600px) {
+
+    .calculator-box {
+        padding: 22px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .calculator-box h3 {
+        font-size: 21px;
+    }
+
+    .result-box .pr-value {
+        font-size: 30px;
+    }
+}
+/* Tablet layout */
+
+@media (max-width: 1000px) {
+    #tools {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile layout */
+
+@media (max-width: 650px) {
+    #tools {
+        grid-template-columns: 1fr;
+    }
+
+    #tools .calculator-box {
+        padding: 20px;
+    }
+}
+/* Solar Calculator Dashboard */
+
+#tools {
+    display: block;
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    align-items: start;
+}
+
+.calculator-grid .calculator-box {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+    .calculator-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+    .calculator-grid {
+        grid-template-columns: 1fr;
+    }
+}
